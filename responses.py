@@ -26,8 +26,8 @@ def sample_responses(input_text):
     if user_message in ("5) ¿Cuáles son los ponderados exigidos para cada programa de la seccional?"):
         return "Cordial saludo \nLa información solicitada la puede encontrar en la página de la uptc www.uptc.edu.co en el micro sitio de admisiones ,en pregrado presencial o pregrado a distancia o virtual según la modalidad que desea ingresar a estudiar y en el paso tres encontrará los puntajes de referencia teniendo en cuenta que se toma el semestre anterior al de la inscripción en ese momento ,de igual manera en el paso dos encontrará un simulador que le ayudará para hacer el cálculo con su puntaje del icfes para verificar si cumple con el puntaje que se exige para ese momento."
     
-    if user_message in ("6"):
-        return "Placeholder 6"
+    if user_message in ("6) ¿Soy estudiante de terminación académica y requiero un certificado de todas las notas vistas en mi programa por lo cual como lo solicitó y lo cancelo?"):
+        return "Cordial saludo \nDebe cancelar por medio de recaudo online en el ítem de certificado de notas por semestres estudiantes activos, debe cancelar $3000 por cada semestre cursado luego enviar comprobante de pago con los datos de la persona que lo solicita (nombre, código, carrera y certificado que se requiere) al correo admisiones.sogamoso@uptc.edu.co y en asunto solicitud de certificado."
     
     if user_message in ("7"):
         return "Informacion de contacto placeholder"
