@@ -29,7 +29,10 @@ def sample_responses(input_text):
     if user_message in ("6) ¿Soy estudiante de terminación académica y requiero un certificado de todas las notas vistas en mi programa por lo cual como lo solicitó y lo cancelo?"):
         return "Cordial saludo \nDebe cancelar por medio de recaudo online en el ítem de certificado de notas por semestres estudiantes activos, debe cancelar $3000 por cada semestre cursado luego enviar comprobante de pago con los datos de la persona que lo solicita (nombre, código, carrera y certificado que se requiere) al correo admisiones.sogamoso@uptc.edu.co y en asunto solicitud de certificado."
     
-    if user_message in ("7"):
+    if user_message in ("7) ¿Quisiera saber cuándo es el costo del valor de la matrícula para los programas que se ofertan en la universidad?"):
+        return "El valor de la matrícula se realiza por estudio socioeconómico."
+
+    if user_message in ("8"):
         return "Informacion de contacto placeholder"
  
 
