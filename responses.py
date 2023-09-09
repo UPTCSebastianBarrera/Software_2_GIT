@@ -32,7 +32,7 @@ def sample_responses(input_text):
     if user_message in ("7) ¿Quisiera saber cuándo es el costo del valor de la matrícula para los programas que se ofertan en la universidad?"):
         return "El valor de la matrícula se realiza por estudio socioeconómico."
 
-    if user_message in ("8"):
+    if user_message in ("8) Para mas informacion"):
         return "Informacion de contacto placeholder"
  
 
