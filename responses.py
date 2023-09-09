@@ -33,7 +33,7 @@ def sample_responses(input_text):
         return "El valor de la matrícula se realiza por estudio socioeconómico."
 
     if user_message in ("8) Para mas informacion"):
-        return "Informacion de contacto placeholder"
+        return "Para mas informacion puede contactarse directamente con el area de admisiones al siguiente correo: admisiones.sogamoso@uptc.edu.co"
  
 
     return "Opcion no encontrada, intenta otra vez."
