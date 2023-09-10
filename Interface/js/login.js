@@ -1,5 +1,10 @@
-document.addEventListener('DOMContentLoaded', eventListener);
+document.addEventListener('DOMContentLoaded', function(){
+    // Validación de formulario
 
-function eventListener(){
+
+    eventListeners();
+});
+
+function eventListeners(){
     
 }
