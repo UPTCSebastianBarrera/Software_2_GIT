@@ -6,5 +6,10 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function eventListeners(){
+    passwordValidation();
+}
+
+function passwordValidation(){
     
+
 }
