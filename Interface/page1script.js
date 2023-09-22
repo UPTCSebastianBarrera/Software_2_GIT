@@ -10,6 +10,8 @@ const SearchQInput = document.querySelector(".SearchQInput");
 
 const QAs = document.querySelector(".QAs");
 
+//Permite añadir una pregunta con respuesta al HTML
+
 const AddQ =()=>{
 
   const AddQInputContent = AddQInput.value;
@@ -36,16 +38,19 @@ const AddQ =()=>{
   a.textContent="X";
   a.href="#"
 
+  //Permite eliminar preguntas individuales
   a.addEventListener("click", function(){
     QAs.removeChild(QA);
   })
 
-  
+
   spna.appendChild(a);
 
   QAs.appendChild(QA);
   
 }
+
+//Permite limpiar el listado de preguntas del HTML
 
 const ClearQ=()=>{
 
@@ -53,5 +58,24 @@ const ClearQ=()=>{
 
 }
 
+//Permite buscar una pregunta especifica del listado de HTML
+const SearchQ=()=>{
+
+  const paragraphList=document.querySelectorAll(".QAContent");
+
+  console.log(paragraphList);
+
+  paragraphList.forEach(text => {
+    if (text.textContent.toLowerCase().includes(SearchQInput.value.toLowerCase())) {
+      text.parentElement.classList.remove("d-none");
+    } else {
+      text.parentElement.classList.add("d-none");
+    }
+  });
+
+}
+
+
 AddBtn.addEventListener("click", AddQ);
 ClearBtn.addEventListener("click",ClearQ);
+SearchQInput.addEventListener("input",SearchQ);
