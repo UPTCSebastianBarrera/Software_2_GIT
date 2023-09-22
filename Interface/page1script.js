@@ -34,11 +34,24 @@ const AddQ =()=>{
   const a = document.createElement("a");
   a.classList.add("text-decoration-none");
   a.textContent="X";
+  a.href="#"
+
+  a.addEventListener("click", function(){
+    QAs.removeChild(QA);
+  })
+
+  
   spna.appendChild(a);
 
   QAs.appendChild(QA);
   
 }
 
+const ClearQ=()=>{
+
+  QAs.textContent="";
+
+}
 
 AddBtn.addEventListener("click", AddQ);
+ClearBtn.addEventListener("click",ClearQ);
