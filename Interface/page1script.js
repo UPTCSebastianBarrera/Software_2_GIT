@@ -24,7 +24,7 @@ const AddQ =()=>{
   QA.classList.add("QA","border-2","border","border-warning","rounded","d-flex","justify-content-between");
 
   const paragraph = document.createElement("p");
-  paragraph.classList.add("QAContent","p-2","text-justify");
+  paragraph.classList.add("QAContent","p-2","text-break");
   paragraph.textContent = AddQInputContent;
 
   QA.appendChild(paragraph);

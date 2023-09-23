@@ -10,7 +10,7 @@
 
     <title>Administrador</title>
   </head>
-  <body>
+  <body class="bg-warning">
     <nav class="nav nav-tabs p-2 d-flex justify-content-start">
       <a href="page1.html" class="nav-link">
         Chatbot
@@ -23,9 +23,70 @@
       </a>
     </nav>
 
-    <div class="bg-white" style="height: 90vh;">
-
+    <div class="container-fluid bg-warning p-3 d-flex justify-content-center align-items-center" style="height: 90vh;">
+      <div class="container">
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  .container {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 500px;
+  }
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #565656;
+  }
+  
+  @media all and (max-width: 780px) {
+    .container {
+      width: auto;
+    }
+  }
+  
+  @media all and (max-width: 400px) {
+    .container {
+      padding: 0px 20px;
+    }
+  }
+        </style>
+        <h1>Grafica de satisfacción</h1>
+        <div>
+          <canvas id="pie-chart"></canvas>
+        </div>
+      </div>
+      <script src="chart.min.js"></script>
+      <script>
+      new Chart(document.getElementById('pie-chart'), {
+        type: 'pie',
+        data: {
+          labels: ["Satisfecho","No Satisfecho"],
+          datasets: [{
+            backgroundColor: ["#fcba03", "#808080",
+              "#ffbe0b", "#1d3557", "#326998"
+            ],
+            data: [418,400]
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Pie Chart for admin panel'
+          },
+          reponsive: true
+        }
+      });
+      </script>
     </div>
+    
 
 
 
