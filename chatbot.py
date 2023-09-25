@@ -18,7 +18,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
-    await update.message.reply_text('Escribe \na si tiene dudas \nb si quieres enviarnos un mensaje \nc para responder nuestra encuesta de satisfaccion \nc para contactarnos \n/help para volver al menu de inicio')
+    await update.message.reply_text('Escribe \na) Preguntas mas frecuentes \nb) Si quieres enviarnos un mensaje \nc) Para responder nuestra encuesta de satisfaccion \nd) Para contactarnos \n/help Para volver al menu de inicio')
 
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('este es un comando custom')
