@@ -1,5 +1,5 @@
 body{
-    background-color: ;
+    
 }
 
 .formulario{
@@ -12,29 +12,53 @@ body{
     align-items: center;
     margin: auto auto;
     border-radius: 10px;
+    text-transform: uppercase;
+    background-color: #e8e8e6;
+    border: none;
 }
 
 .formulario #experienciaForm{
     padding: 10px;
     text-align: center;
-    width: 400px;
-    background-color: #e8e8e6;
+    width: 450px;
     display: inherit;
     flex-direction: column;
     border-radius: 10px;
     align-items: center;
 }
 
-#experienciaForm textarea{
-    height: 140px;
+#experienciaForm label{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+#experienciaForm input{
+    margin-top: 10px;
+    border: none;
     border-radius: 10px;
-    padding: 10px;
+    width: 70px;
+    height: 30px;
+}
+
+#experienciaForm textarea{
+    height: 200px;
+    border-radius: 10px;
+    padding: 15px;
     border:none;
-    color: #e8e8e6;
-    width: 340px;
+    color: black;
+    width: 400px;
 }
 
 #experienciaForm button{
+    background-color: #ffcc29;
+    color: black;
+    text-transform: uppercase;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    width: 120px;
+    font-weight: bold;
+    cursor: pointer;
 
-    width: 180px;
 }
