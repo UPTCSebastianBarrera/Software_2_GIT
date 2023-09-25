@@ -18,7 +18,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
-    await update.message.reply_text('Escribe \na si tiene dudas \nb si quieres enviarnos un mensaje \nc para responder nuestra encuesta de satisfaccion \nc para contactarnos \n/help para volver al menu de inicio')
+    await update.message.reply_text('Escribe \na si tiene dudas \nb si quieres enviarnos un mensaje \nc para responder nuestra encuesta de satisfaccion \nd para contactarnos \n/help para volver al menu de inicio')
 
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('este es un comando custom')
@@ -47,46 +47,59 @@ def handle_responses(text: str) -> str:
     processed: str = text.lower()
     
     
-    if 'a' in text:
+    if 'a' in processed:
         
         
         
         return res.connection(processed)
         
-    if 'b' in text:
-        return 'pregunta especifica'
+    if 'b' in processed:
+        return 'Escriba la pregunta especifica que quiere agregar'
     
-    if 'c' in text:
-        return 'encuesta'
+    if 'c' in processed:
+        
+        return 'Su opinion es importante, por lo tanto digite\n s si su experiencia fue buena\n n si su experiencia fue mala\n utilizando el chatbot'
     
-    if 'd' in text:
-        return 'contactanos'
+    if 'd' in processed:
+        return 'contactanos en http://www.uptc.edu.co/adm_reg/contacto'
     
     
-    if '1':
-    
-        return res.connection(processed)
-    
-    if '2':
+    if '1' in processed:
     
         return res.connection(processed)
-    if '3':
+    
+    if '2' in processed:
+    
+        return res.connection(processed)
+    if '3' in processed:
         return res.connection(processed)
     
-    if '4':
+    if '4' in processed:
         return res.connection(processed)
     
-    if '5':
+    if '5' in processed:
         return res.connection(processed)
     
-    if '6':
+    if '6' in processed:
         return res.connection(processed)
     
-    if '7':
+    if '7' in processed:
         return res.connection(processed)
     
-    if '8':
+    if '8' in processed:
         return res.connection(processed)
+    
+    if 'n' in processed:
+        
+        print('tomado')
+        return res.survey(processed)
+    
+    if 's' in processed:
+        
+        print('tomado')
+        return res.survey(processed)
+        
+       
     
     
     return 'opcion incorrecta'

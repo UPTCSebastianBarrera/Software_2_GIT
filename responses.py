@@ -6,6 +6,76 @@ import psycopg2
 
 cur=None
 
+
+def survey(input_text):
+    
+    user_message = str(input_text).lower()
+    
+    try:
+    
+        conn = psycopg2.connect(
+        
+            host = 'localhost',
+            user = 'postgres',
+            password = '1234',
+            database = 'ChatbotQA',
+            port = '5432'
+        
+        )
+        cur = conn.cursor()
+
+        if user_message == 's':
+            cur.execute('UPDATE "Surveys" SET "SI"="SI"+1 WHERE id=1')
+            return 'Voto tomado'    
+        if user_message == 'n':
+            cur.execute('UPDATE "Surveys" SET "NO"="NO"+1 WHERE id=1')
+            return 'Voto tomado'
+        else:
+            return 'Error en registrar voto'
+        
+        
+    except Exception as ex:
+        print(ex)
+    
+    finally:
+        if cur is not None:
+            cur.close()
+        if conn is not None:
+            conn.close()
+
+def addQ(input_text):
+    
+    user_message = str(input_text).lower()
+    
+    try:
+    
+        conn = psycopg2.connect(
+        
+            host = 'localhost',
+            user = 'postgres',
+            password = '1234',
+            database = 'ChatbotQA',
+            port = '5432'
+        
+        )
+        cur = conn.cursor()
+
+        return 'pregunta agregada'
+        
+        
+        
+    except Exception as ex:
+        print(ex)
+    
+    finally:
+        if cur is not None:
+            cur.close()
+        if conn is not None:
+            conn.close()
+
+
+    
+
 def connection(input_text):
 
     user_message = str(input_text).lower()
