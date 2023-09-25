@@ -1,0 +1,40 @@
+body{
+    background-color: ;
+}
+
+.formulario{
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    border-radius: 10px;
+}
+
+.formulario #experienciaForm{
+    padding: 10px;
+    text-align: center;
+    width: 400px;
+    background-color: #e8e8e6;
+    display: inherit;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+}
+
+#experienciaForm textarea{
+    height: 140px;
+    border-radius: 10px;
+    padding: 10px;
+    border:none;
+    color: #e8e8e6;
+    width: 340px;
+}
+
+#experienciaForm button{
+
+    width: 180px;
+}
