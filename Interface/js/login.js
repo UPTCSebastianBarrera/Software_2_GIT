@@ -9,7 +9,7 @@ document.getElementById("ingresarBtn").addEventListener("click", function() {
             const usuarioValido = usuarios.find(user => user.mail === usuarioInput && user.password === contrasenaInput);
             if (usuarioValido) {
                 alert("Inicio de sesión exitoso.");
-                // Aquí puedes redirigir al usuario a otra página si es necesario.
+                window.location.href = "page1.html";
             } else {
                 alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
             }
