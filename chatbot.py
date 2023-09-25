@@ -92,12 +92,12 @@ def handle_responses(text: str) -> str:
     if 'n' in processed:
         
         print('tomado')
-        return res.survey(processed)
+        return res.surveyNO(processed)
     
     if 's' in processed:
         
         print('tomado')
-        return res.survey(processed)
+        return res.surveySI(processed)
         
        
     
