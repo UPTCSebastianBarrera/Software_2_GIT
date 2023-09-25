@@ -23,11 +23,18 @@ const AddQ =()=>{
   const QA = document.createElement("div");
   QA.classList.add("QA","border-2","border","border-warning","rounded","d-flex","justify-content-between");
 
+  //const label = document.createElement("label");
+  //label.htmlFor = "";
+  //label.textContent = "Pregunta";
   
   
+
   const paragraph = document.createElement("p");
-  paragraph.classList.add("QAContent","p-2","text-break");
+  paragraph.classList.add("QAContent","p-2","text-break","pregunta[]");
   paragraph.textContent = AddQInputContent;
+  
+
+  
 
   QA.appendChild(paragraph);
 
@@ -42,12 +49,13 @@ const AddQ =()=>{
 
   //Permite eliminar preguntas individuales
   a.addEventListener("click", function(){
+    
     QAs.removeChild(QA);
   })
 
 
   spna.appendChild(a);
-
+  //QAs.appendChild(label);
   QAs.appendChild(QA);
   
 }
