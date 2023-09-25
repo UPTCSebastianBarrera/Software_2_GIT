@@ -2,6 +2,16 @@ body{
     
 }
 
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+
+}
+
 .formulario{
     border: 1px solid black;
     width: 500px;
@@ -10,11 +20,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto auto;
+    margin: 80px auto;
     border-radius: 10px;
     text-transform: uppercase;
     background-color: #e8e8e6;
     border: none;
+    box-shadow: 1px 12px 10px 0px rgba(0,0,0,0.2);
+-webkit-box-shadow: 1px 12px 10px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 1px 12px 10px 0px rgba(0,0,0,0.2);
 }
 
 .formulario #experienciaForm{
