@@ -26,16 +26,141 @@ def connection(input_text):
     
         cur.execute('SELECT * FROM "QAs"')
 
-        if user_message in ("1"):
+        if user_message in ("a"):
             
+            matrix = ""
             for row in cur.fetchall():
                 
-              print(row[0],row[1])
-              return(row[0],row[1])  
+              response = str(row[0]),row[1]
+              
+              rst = ' '.join(response)
+              rst2 = rst+'\n'
+              
+              matrix += rst2
+              
+              print(rst)
+              
+            print(matrix)
+              
+              
+            
+            return matrix 
+        
+        if user_message in ("1"):
+            
+            matrix = ""
+            for row in cur.fetchall():
+               
+              if row[0] == 1:
+                  
+                matrix = row[2]
+      
+            print(matrix)
+                
+            return matrix 
+        
+        if user_message in ("2"):
+            
+            matrix = ""
+            for row in cur.fetchall():
+               
+              if row[0] == 2:
+                  
+                matrix = row[2]
+      
+            print(matrix)
+                
+            return matrix 
+        
+        if user_message in ("3"):
+            
+            matrix = ""
+            for row in cur.fetchall():
+               
+              if row[0] == 3:
+                  
+                matrix = row[2]
+      
+            print(matrix)
+                
+            return matrix 
+              
+            
+            
+        if user_message in ("4"):
+            
+            matrix = ""
+            for row in cur.fetchall():
+               
+              if row[0] == 4:
+                  
+                matrix = row[2]
+      
+            print(matrix)
+                
+            return matrix 
+        
+        if user_message in ("5"):
+            
+            matrix = ""
+            for row in cur.fetchall():
+               
+              if row[0] == 5:
+                  
+                matrix = row[2]
+      
+            print(matrix)
+                
+            return matrix 
+        
+        if user_message in ("6"):
+            
+            matrix = ""
+            for row in cur.fetchall():
+               
+              if row[0] == 6:
+                  
+                matrix = row[2]
+      
+            print(matrix)
+                
+            return matrix 
+        
+        if user_message in ("7"):
+            
+            matrix = ""
+            for row in cur.fetchall():
+               
+              if row[0] == 7:
+                  
+                matrix = row[2]
+      
+            print(matrix)
+                
+            return matrix 
+        
+        if user_message in ("8"):
+            
+            matrix = ""
+            for row in cur.fetchall():
+               
+              if row[0] == 8:
+                  
+                matrix = row[2]
+      
+            print(matrix)
+                
+            return matrix 
+        
+        
+            
+            
+
+            
         
         
         else:
-            return('opcion invalida')
+            return "opcion invalida"
         
 
         print("conexion exitosa")

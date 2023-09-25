@@ -17,34 +17,77 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Escribe \n1 si tiene dudas \n2 si quieres enviarnos un mensaje \n3 para responder nuestra encuesta de satisfaccion \n4 para contactarnos \n/help para volver al menu de inicio')
+    
+    await update.message.reply_text('Escribe \na si tiene dudas \nb si quieres enviarnos un mensaje \nc para responder nuestra encuesta de satisfaccion \nc para contactarnos \n/help para volver al menu de inicio')
 
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('este es un comando custom')
+    
+async def one(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    
+    allQ = res.connection('1')
+    for row in allQ:
+        
+         await update.message.reply_text(row[0],row[1])
+    
+    
 
 #Respuestas
+
+def custom_response(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    
+    update.message.reply_text('t')
+    
+    return None
+    
+
 
 def handle_responses(text: str) -> str:
     
     processed: str = text.lower()
     
-    if '1' in text:
-        
-        res.connection('1')
-        
-        
-        
-        
-        return 'preguntas y respuestas'
     
-    if '2' in text:
+    if 'a' in text:
+        
+        
+        
+        return res.connection(processed)
+        
+    if 'b' in text:
         return 'pregunta especifica'
     
-    if '3' in text:
+    if 'c' in text:
         return 'encuesta'
     
-    if '4' in text:
+    if 'd' in text:
         return 'contactanos'
+    
+    
+    if '1':
+    
+        return res.connection(processed)
+    
+    if '2':
+    
+        return res.connection(processed)
+    if '3':
+        return res.connection(processed)
+    
+    if '4':
+        return res.connection(processed)
+    
+    if '5':
+        return res.connection(processed)
+    
+    if '6':
+        return res.connection(processed)
+    
+    if '7':
+        return res.connection(processed)
+    
+    if '8':
+        return res.connection(processed)
+    
     
     return 'opcion incorrecta'
 
@@ -62,6 +105,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         else:
             return
     else:
+        
+        
         response: str = handle_responses(text)
         
     print('Bot: ', response)
