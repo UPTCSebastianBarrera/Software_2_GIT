@@ -4,6 +4,11 @@
             "id": 1,
             "mail": "prueba@correo.com",
             "password": "123"
+        },
+        {
+            "id": 2,
+            "mail": "prueba2@correo.com",
+            "password": "123"
         }
     ]
 }
