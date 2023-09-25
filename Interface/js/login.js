@@ -2,6 +2,22 @@ document.getElementById("ingresarBtn").addEventListener("click", function() {
     const usuarioInput = document.getElementById("usuarioInput").value;
     const contrasenaInput = document.getElementById("contrasenaInput").value;
 
+    // Expresión regular para validar el formato del correo electrónico
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    // Expresión regular para validar la contraseña (mínimo 6 caracteres)
+    const passwordRegex = /^.{3,}$/;
+
+    if (!emailRegex.test(usuarioInput)) {
+        alert("Por favor, ingresa un correo electrónico válido.");
+        return;
+    }
+
+    if (!passwordRegex.test(contrasenaInput)) {
+        alert("La contraseña debe tener al menos 6 caracteres.");
+        return;
+    }
+
     fetch("/Software_2_GIT/Interface/assets/users.json") // Cargamos el archivo JSON
         .then(response => response.json())
         .then(data => {
