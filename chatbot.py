@@ -29,6 +29,12 @@ def handle_responses(text: str) -> str:
     processed: str = text.lower()
     
     if '1' in text:
+        
+        res.connection('1')
+        
+        
+        
+        
         return 'preguntas y respuestas'
     
     if '2' in text:
