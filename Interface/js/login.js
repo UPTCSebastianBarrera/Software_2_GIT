@@ -18,7 +18,7 @@ document.getElementById("ingresarBtn").addEventListener("click", function() {
         return;
     }
 
-    fetch("/Software_2_GIT/Interface/assets/users.json") // Cargamos el archivo JSON
+    fetch("/Software_2_GIT/data/users.json") // Cargamos el archivo JSON
         .then(response => response.json())
         .then(data => {
             const usuarios = data.usuarios;
