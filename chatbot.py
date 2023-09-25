@@ -13,7 +13,7 @@ BOT_USERNAME: Final = '@Admisiones_UPTC_bot'
 # Comandos
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Buenas bienvenido al chatbot de telegram \nEscribe el comando /help para continuar')
+    await update.message.reply_text('Buenas, bienvenido al chatbot de telegram \nEscribe el comando /help para continuar')
 
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
