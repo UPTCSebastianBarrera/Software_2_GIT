@@ -1,5 +1,60 @@
 from datetime import datetime
+import psycopg2
 
+
+
+
+cur=None
+
+def connection(input_text):
+
+    user_message = str(input_text).lower()
+    
+    try:
+    
+        conn = psycopg2.connect(
+        
+            host = 'localhost',
+            user = 'postgres',
+            password = '1234',
+            database = 'ChatbotQA',
+            port = '5432'
+        
+        )
+    
+        cur = conn.cursor()
+    
+        cur.execute('SELECT * FROM "QAs"')
+
+        if user_message in ("1"):
+            
+            for row in cur.fetchall():
+                
+              print(row[0],row[1])
+              return(row[0],row[1])  
+        
+        
+        else:
+            return('opcion invalida')
+        
+
+        print("conexion exitosa")
+    except Exception as ex:
+        print(ex)
+    
+    finally:
+        if cur is not None:
+            cur.close()
+        if conn is not None:
+            conn.close()
+
+
+
+
+
+
+
+'''
 def sample_responses(input_text):
     user_message = str(input_text).lower()
 
@@ -37,5 +92,6 @@ def sample_responses(input_text):
  
 
     return "Opcion no encontrada, intenta otra vez."
-    
+
+''' 
     
