@@ -24,7 +24,6 @@ document.getElementById("ingresarBtn").addEventListener("click", function() {
             const usuarios = data.usuarios;
             const usuarioValido = usuarios.find(user => user.mail === usuarioInput && user.password === contrasenaInput);
             if (usuarioValido) {
-                alert("Inicio de sesión exitoso.");
                 window.location.href = "page1.html";
             } else {
                 alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
